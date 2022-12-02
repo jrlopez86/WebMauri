@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Mauricio Sabaj - Escritor</title>
+        <link rel="stylesheet" href="css/libros.css">
+        <link rel="stylesheet" href="css/font-awesome.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Creepster&family=Libre+Baskerville&family=Open+Sans:wght@400;800&family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet"> 
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        
+        
+    </head>
+    <body>
+                <!-- Boton "Volver Arriba" -->
+                <div class="btn-volver-arriba" id="btnVolverArriba">
+                    <a href="#" class="volver-arriba">
+                        <svg xmlns="http://www.w3.org/2000/svg" ; viewBox="-300 -250 1000 904" fill="white" ><!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M374.6 246.6C368.4 252.9 360.2 256 352 256s-16.38-3.125-22.62-9.375L224 141.3V448c0 17.69-14.33 31.1-31.1 31.1S160 465.7 160 448V141.3L54.63 246.6c-12.5 12.5-32.75 12.5-45.25 0s-12.5-32.75 0-45.25l160-160c12.5-12.5 32.75-12.5 45.25 0l160 160C387.1 213.9 387.1 234.1 374.6 246.6z"/></svg>
+                    </a>
+                </div>
+
+
+                <!-- Navegación Mobile -->
+                <header class="header menu-mobile" id="header" >   
+                        <div class="logo">
+                            <img class="ms" src="./img/logo3.jpg" alt="">
+                        </div>
+                        <a href="#" class="btn-menu" id="btnMenu">
+                            <img src="./img/ham.svg" alt="">
+                        </a>
+                        <nav class="menu-oculto">
+                            <a class="enlace" href="index.html">Inicio</a>
+                            <a class="enlace" href="libros.html">Libros</a>
+                            <a class="enlace" href="biografia.html">Biografía</a>
+                            <a class="enlace" href="formulario.html">Contacto</a>
+                    </nav>    
+                </header>
+                
+                <!-- Navegación PC  -->
+                <div class="contenedor">
+                    <header class="header navegacionpc" id="header" >
+                        <div class="logo">
+                            <img class="ms" src="./img/logo3.jpg" alt="">
+                        </div>
+                        <nav class="navegacion">
+                            <a class="enlace" href="index.html">Inicio</a>
+                            <a class="enlace" href="libros.html">Libros</a>
+                            <a class="enlace" href="biografia.html">Biografía</a>
+                            <a class="enlace" href="formulario.html">Contacto</a>
+                        </nav>
+                        
+                    </header>
+
+                <!-- Fotos libros -->
+                <div class="foto" id="foto"></div>
+                    <div class="libro1">
+                        <img src="./img/fondo2.png">
+                        <h1 class="titulo">El héroe improbable.</h1>
+                        <div class="spanborrar">
+                            <span class="texto1"><b>Fecha de salida</b><span class="textspan">25/2/2005</span></span><br>
+                            <span class="texto1"><b>Disponible en formato</b><span class="textspan">Físico</span></span><br>
+                            <span class="texto1"><b>Publicado por</b><span class="textspan">Planeta</span></span>
+                        </div>
+                        <p class="parrafo">Lorem ipsum dolor sit amet, 
+                        consectetur adipisicing elit. Quo saepe veniam laboriosam, 
+                        dolor rerum reprehenderit?
+                        </p>
+                        <input class="boton" type="button" onclick="location.href='http://google.com';" value="Comprar" />
+                        <br>
+
+                        <hr>
+                    </div>
+                    
+
+                <div class="foto2" id="foto2"></div>  
+                    <div class="libro2">
+                        <img src="./img/fondo.png" alt="">
+                        <h1 class="titulo">El ocaso de un sistema.</h1>
+                        <div class="spanborrar">
+                            <span class="texto1"><b>Fecha de salida</b><span class="textspan">25/2/2005</span></span><br>
+                            <span class="texto1"><b>Disponible en formato</b><span class="textspan">Físico</span></span><br>
+                            <span class="texto1"><b>Publicado por</b><span class="textspan">Planeta</span></span>
+                        </div>
+                        <p class="parrafo">Lorem ipsum dolor sit amet, 
+                        consectetur adipisicing elit. Quo saepe veniam laboriosam, 
+                        dolor rerum reprehenderit?
+                        </p>
+
+                        <p><b>NO A LA VENTA ONLINE</b></p>
+                    </div>
+                 
+
+            
+            
+             <!-- Footer  -->
+            <footer class="footer">
+                <footer class="footer">
+                    <div class="parrafofoot">
+                        <p class="derechos">Todos los derechos reservados</p>
+                        <span class="spanfoot"> Image by BiZkettE1 on Freepik </span>  
+                    </div>
+                    <br>
+                    <div class="redes">
+                        <a href="">
+                            <img class="" src="./img/linkedin.svg" alt="">
+                        </a>
+                        <a href="https://mobile.twitter.com/mauriciosabajm">
+                            <img class="" src="./img/twitter.svg" alt="">
+                        </a>
+                        <a href="">
+                            <img class="" src="./img/instagram.svg" alt="">
+                        </a>
+                    </div>
+                                                                                          
+            </footer>
+        </div>   
+
+
+        
+        <script src="js/jquery.min.js"></script>
+        <script src="js/vovlerarriba.js"></script>
+        <script src="js/menuMobile.js"></script>
+        <script src="js/prefixfree.min.js"></script>
+        <script src="js/headroom.min.js"></script>
+
+        
+        <script>
+            var cabecera = document.querySelector('.header');
+            var headroom = new Headroom(cabecera);
+            headroom.init();
+        </script>
+        
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script>
+            AOS.init();
+          </script>
+    </body>   
+</html>

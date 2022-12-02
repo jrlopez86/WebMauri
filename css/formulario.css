@@ -1,0 +1,388 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background:#fafbfd ;
+    color: #000;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+
+
+
+
+/* se aplica css grid para armar el layout  */
+.contenedor{
+    width: 100%;
+    margin: 0 auto;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas: "header           header           header        header"
+                         "texto            texto            formulario    formulario"
+                         "footer           footer           footer        footer";
+}
+
+.contenedor .logo {
+    width: 50px;
+    position: relative;
+    margin-right: auto;
+    margin-left: 10px;
+  }
+    
+
+
+.contenedor .logo .ms{
+   width: 100%;
+   vertical-align: top;
+   opacity: 0.5;
+   
+}
+
+
+
+
+
+
+
+/* Header */
+header{
+    height: 80px;
+    background: #f2f2f2;
+    grid-area: header;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px -3px 18px 0px rgba(0,0,0,0.3);
+}
+
+.navegacion {
+    position: absolute;
+    margin-left: 25px;
+
+}
+
+/* .navegacion{
+    margin-right: 16px;
+} */
+
+.navegacion a{
+    text-decoration: none;
+    font-family: 'Libre Baskerville', serif;
+    margin: 0 15px;
+    color: #000;
+    font-size: 16px;
+    transition: all .4s ease;
+    letter-spacing: 1px;
+
+
+}
+
+.navegacion a:hover{
+    color: #dc3545;
+
+}
+
+.menu-mobile{
+    display: none;
+}
+
+
+
+
+/* Mensaje */
+.cartel {
+    grid-area: texto;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    margin-top: 80px;
+    margin-left: 60px;
+}
+
+.tituloCartel{
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+.mensajeCartel {
+    font-family: 'Cutive Mono', monospace;
+}
+
+
+
+
+/* FORMULARIO */
+.contenedor-contacto{
+    grid-area: formulario;
+    width: 100%;
+    height: 100vh;
+    
+}
+
+.contenedor-contacto .formulario{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 80px;   
+    
+}
+
+.formulario .contenedor-inputs{
+    padding: 20px;
+    /* background: #f2f2f2; */
+    border-radius: 6px 6px 0 0 ;
+    width: 80%;
+    margin-top: 80px;
+}
+
+.formulario input[type="text"],
+.formulario input[type="email"] {
+    display: block;
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 15px 10px;
+    border: none;
+    border-bottom: 2px solid #ccc;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 16px;
+    outline: none;
+    background-color: #fafbfd;
+    
+}
+
+.formulario input[type="text"]:focus,
+.formulario input[type="email"]:focus {
+    border-bottom: 2px solid #246eb9;
+    
+
+}
+
+
+.formulario textarea:focus {
+    border: 2px solid #246eb9;
+}
+
+.texto{
+    padding: 20px;
+    max-width: 100%;
+    min-width: 100%;
+    max-height: 200px;
+    min-height: 200px;
+    outline: none;
+    font-family: 'Libre Baskerville', serif;
+    font-size: 14px;
+    padding-left: 9px;
+    background-color: #fafbfd;
+    border: none;
+    border: 2px solid #ccc;
+    
+}
+
+.btn{
+    background: grey;
+    padding: 20px;
+    width: 20%;
+    cursor: pointer;
+    margin-top: 15px;
+    font-family: 'Libre Baskerville', serif;
+    color: #FFF;
+    letter-spacing: 1px;
+   
+}
+
+.error{
+    display: none;
+}
+
+.formulario .error{
+    display: none;
+    margin-top: 20px;
+    border-radius: 3px;
+    background: #ce1818;
+    color: #fff;
+    padding: 15px 10px;
+    padding-left: 40px;
+}
+
+
+
+
+
+
+
+
+/* Footer */
+.contenedor .footer{
+    padding: 10px;
+    height: 140px;
+    background-color: #333333;
+    grid-area: footer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+.contenedor .footer p{
+    font-size: 18px;
+   
+}
+
+.contenedor .footer .redes {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.contenedor .footer .redes a {
+    margin: 0px 10px;
+}
+
+
+
+
+
+
+
+@media screen and (max-width: 1190px) {
+
+    .navegacion{
+        margin-left: 0px
+    }
+
+
+    .contenedor-inputs{
+    width: 100%;
+    
+    }
+
+    .formulario .contenedor-inputs{
+        width: 100%;
+    }
+
+/* menu mobile */
+.menu-mobile{
+    display: block;
+    width: 100%;
+    padding: 5px 18px;
+    background: #f2f2f2;
+    color: #000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+
+
+
+
+.menu-mobile .btn-menu img{
+    float: right;
+    height: 40px;
+    margin-left: auto;
+    margin-top: 15px;
+    transition:  .3s; 
+    width: 20px;
+    margin-top: -44px;
+}
+
+.menu-mobile .btn-menu img:hover{
+    transform: scale(1.1);
+}
+
+
+
+.menu-mobile .menu-oculto{
+    width: 100%;
+    display: block;
+    position: fixed;
+    top: 80px;
+    left: -100%;
+    border-bottom: 1px solid rgba(204,204,204,0.5);
+    border-right: 1px solid rgba(204,204,204,0.5);
+    box-shadow: 0px 1px 5px -1px rgba(0,0,0,0.2);
+    background: rgba(255, 255, 255, 0.5);
+    text-align: center;
+    
+}
+
+.menu-mobile .menu-oculto a{
+    display: block;
+    padding: 10px;
+    color: #000;
+    border-bottom: 1px solid rgba(204,204,204,0.5);
+    text-decoration: none;
+}
+
+.menu-mobile .menu-oculto a:hover{
+    background: #f7f7f7;
+}
+
+.menu-mobile .logo {
+    width: 50px;
+    position: relative;
+    margin-right: auto;
+    margin-left: 10px;
+  
+  }
+    
+
+
+  .menu-mobile .logo .ms{
+   width: 50px;
+   margin-top: 10px;
+}
+
+    .btn{
+        width: 100%;
+        border-radius: 10px 10px 10px 10px;
+    }
+         
+      }
+
+    .formulario .error{
+     font-size: 14px;
+    }
+    
+    .contenedor-contacto .formulario{
+       
+        margin: 0;
+    }
+    
+    
+
+
+    @media screen and (max-width: 790px) {
+
+        .contenedor{
+            width: 100%;
+            margin: 0 auto;
+            display: grid;
+            grid-gap: 20px;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(3, auto);
+            grid-template-areas: "header           header           header        header"
+                                 "formulario            formulario            formulario    formulario"
+                                 "footer           footer           footer        footer";
+        }
+
+        .cartel {
+            display: none;
+        }
+
+        .contenedor-contacto{
+            height: 90vh;
+        }
+        
+        .contenedor-contacto .formulario{
+            height: 82vh; 
+            margin-top: -80px;
+        }
+    }
